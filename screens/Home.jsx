@@ -4,20 +4,26 @@ import { useState } from 'react'
 import VideoCard from '../components/VideoCard'
 import { api } from '../utils/api'
 import { ScrollView } from 'react-native-gesture-handler'
+import Constants from 'expo-constants';
+import { useNavigation } from '@react-navigation/native'
+import NavBar from '../components/NavBar'
 
 const Home = () => {
+    const navigation = useNavigation();
     
   const [data, setData] = useState([]);
     useEffect(()=>{
         api(`trending?maxResults=10`).then((response)=>setData(response))
     },[])
   return (
-    <ScrollView>
-      <Text>Home</Text>
-      <View className="flex flex-wrap lg:ml-1 md:px-2 ">
-          {data.map((item) => { 
+    <View className="bg-black" style={{marginTop: Constants.statusBarHeight }}>
+      <NavBar/>
+      <ScrollView className="flex px-2">
+          {data.map((item,index) => { 
             return ( item.lengthSeconds > 60  &&
               <VideoCard
+             
+              key={index}
                 videoId={item.videoId}
                 title={item.title}
                 channelTitle={item.author}
@@ -25,13 +31,13 @@ const Home = () => {
                 viewCount={item.viewCount}
                 publishText={item.publishedText}
                 lengthText={item.lengthSeconds}
-                thumbnail={item.videoThumbnails[4].url}
-                // channelThumbnail={item.channelThumbnail[0].url}
+                thumbnail={item.videoThumbnails[3].url}
+                // channelThumbnail={item.channelThumbnail[1].url}
               />
             );
           })}
-        </View>
-      </ScrollView>
+        </ScrollView>
+      </View>
   )
 }
 
