@@ -6,6 +6,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from '@react-navigation/stack';
 import VideoScreen from './screens/VideoScreen';
 import SearchScreen from './screens/SearchScreen';
+import ChannelScreen from './screens/ChannelScreen';
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -19,6 +20,7 @@ export default function App() {
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="VideoScreen" component={VideoScreen}/>
         <Stack.Screen name="SearchScreen" component={SearchScreen}/>
+        <Stack.Screen name="ChannelScreen" component={ChannelScreen}/>
       </Stack.Navigator>
       <StatusBar style="light" backgroundColor='black'/>
     </NavigationContainer>

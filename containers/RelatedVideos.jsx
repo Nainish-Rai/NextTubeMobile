@@ -4,7 +4,7 @@ import VideoCard from '../components/VideoCard'
 
 const RelatedVideos = ({data}) => {
   return ( data?
-    <View className="bg-slate-100 dark:bg-black px-2">
+    <View className="bg-slate-100 dark:bg-black px-3 pb-64">
       {data && data.map((item,index) => {
           return (
             <VideoCard
@@ -16,7 +16,7 @@ const RelatedVideos = ({data}) => {
               viewCount={item.viewCountText}
               // publishText={item.publishedTimeText}
               lengthText={item.lengthSeconds}
-              thumbnail={item.videoThumbnails && item.videoThumbnails[4].url}
+              thumbnail={item.videoThumbnails && item.videoThumbnails[3].url}
               // channelThumbnail={item.authorThumbnail}
             />
           );

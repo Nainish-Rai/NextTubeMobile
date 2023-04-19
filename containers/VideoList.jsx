@@ -5,11 +5,12 @@ import React from 'react'
 
 const VideoList = ({data}) => {
   return (
-    <ScrollView>
+    <ScrollView className="px-4">
                 {data.map((item,index)=>{
                     if (item.type == "video") {
                         return (
                           <VideoCard
+                            key={index}
                             videoId={item.videoId}
                             title={item.title}
                             channelTitle={item.author}
@@ -17,7 +18,7 @@ const VideoList = ({data}) => {
                             viewCount={item.viewCount}
                             publishText={item.publishedText}
                             lengthText={item.lengthSeconds}
-                            thumbnail={item.videoThumbnails && item.videoThumbnails[4].url}
+                            thumbnail={item.videoThumbnails && item.videoThumbnails[3].url}
                             // channelThumbnail={item.channelThumbnail[0].url}
                           />
                         );}  

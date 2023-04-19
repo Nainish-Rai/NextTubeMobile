@@ -36,9 +36,9 @@ const VideoCard = ({
         <Image source={{uri : channelThumbnail}} className="w-24 h-24 object-cover rounded-full" />
         </View> */}
         <View className="mt-2 mx-1">
-          <Text className="text-white font-semibold text-base">{title}</Text>
+          <Text className="text-white font-medium text-base">{title}</Text>
           <View className="flex flex-row pt-1 gap-3">
-            <Text className="text-gray-100 ">{channelTitle}</Text>
+            <Text className="text-gray-100 " onPress={()=>navigation.navigate("ChannelScreen",{channelId})}>{channelTitle}</Text>
             <Text className="text-gray-100">
               {viewCount < 1000000
                 ? Math.floor(viewCount / 1000) + "K"

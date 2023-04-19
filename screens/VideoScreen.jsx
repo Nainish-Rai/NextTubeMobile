@@ -57,7 +57,7 @@ const VideoScreen = ({ route, navigatiom }) => {
           />
         </View>
         <View>
-          <Text className="text-white font-semibold text-xl mt-2 ml-2">
+          <Text className="text-white font-semibold text-xl mt-2 ml-6">
             Related Videos
           </Text>
           <RelatedVideos data={data.recommendedVideos} />
