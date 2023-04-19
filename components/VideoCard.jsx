@@ -21,7 +21,7 @@ const VideoCard = ({
   return (
     <View className="w-full my-4">
       {/* Thumbnail */}
-      <View className="rounded-3xl shadow-lg shadow-white overflow-hidden">
+      <View className="rounded-3xl  overflow-hidden">
         <TouchableOpacity onPress={()=>navigation.navigate("VideoScreen",{videoId})}>
           <Image
             

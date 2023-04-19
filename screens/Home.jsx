@@ -16,7 +16,7 @@ const Home = () => {
         api(`trending?maxResults=10`).then((response)=>setData(response))
     },[])
   return (
-    <View className="bg-black" style={{marginTop: Constants.statusBarHeight }}>
+    <View className="bg-black dark:bg-black" style={{marginTop: Constants.statusBarHeight }}>
       <NavBar/>
       <ScrollView className="flex px-2">
           {data.map((item,index) => { 

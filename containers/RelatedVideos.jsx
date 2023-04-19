@@ -4,7 +4,7 @@ import VideoCard from '../components/VideoCard'
 
 const RelatedVideos = ({data}) => {
   return ( data?
-    <View className="bg-black">
+    <View className="bg-slate-100 dark:bg-black px-2">
       {data && data.map((item,index) => {
           return (
             <VideoCard

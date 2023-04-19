@@ -23,7 +23,7 @@ const VideoScreen = ({ route, navigatiom }) => {
   return (
     <View className="bg-black">
       {/* video player */}
-      <View className="w-full z-10 overflow-hidden rounded-b-3xl border-b shadow-lg drop-shadow-xl bg-black shadow-black pb-2">
+      <View className="w-full z-10 overflow-hidden rounded-b-3xl border-b shadow-lg drop-shadow-xl bg-black shadow-black ">
         <Video
           ref={video}
           className=" h-64 w-full rounded-b-3xl"

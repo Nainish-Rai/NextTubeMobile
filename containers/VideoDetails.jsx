@@ -23,7 +23,7 @@ const VideoDetails = ({
       </View>
       <View>
         <Text className="text-gray-100">
-          {readmore?description && description.slice(0,50):description}
+          {readmore?description:description && description.slice(0,50)}
         </Text>
         <Text className="text-white" onPress={()=>setReadmore(!readmore)}>{readmore?"Read More...":"Read Less"}</Text>
         
