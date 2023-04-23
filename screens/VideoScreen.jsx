@@ -34,13 +34,14 @@ const VideoScreen = ({ route, navigatiom }) => {
               data.formatStreams[data.formatStreams.length - 1].url,
           }}
           useNativeControls={true}
-          resizeMode={ResizeMode.COVER}
+          // resizeMode={ResizeMode.COVER}
           isLooping
+          shouldPlay={true}
           onPlaybackStatusUpdate={(status) => setStatus(() => status)}
         />
       </View>
       <ScrollView className="-mt-5">
-        <View className="pt-10">
+        <View className="pt-0">
           <VideoDetails
             id={videoId}
             title={data.title}
@@ -57,7 +58,7 @@ const VideoScreen = ({ route, navigatiom }) => {
           />
         </View>
         <View>
-          <Text className="text-white font-semibold text-xl mt-2 ml-6">
+          <Text className="text-white font-medium text-2xl mt-4 ml-4">
             Related Videos
           </Text>
           <RelatedVideos data={data.recommendedVideos} />

@@ -11,10 +11,11 @@ const SearchBar = () => {
     const [searchTerm,setSearchTerm]=useState("")
   return (
     <TextInput
-    placeholder='Search NFTS'
+    placeholder='Search Here'
+    placeholderTextColor="#FFF"
     onChangeText={(Text)=>setSearchTerm(Text)}
     onSubmitEditing={()=>navigation.navigate("SearchScreen",{searchTerm})}
-    className=" placeholder:text-gray-50 text-white text-base font-semibold h-6 w-16 rounded-full"/>
+    className="bg-gray-300/10 placeholder:text-gray-100 px-4 p-2 inset-4 text-white text-base font-medium w-36 rounded-full"/>
   )
 }
 
