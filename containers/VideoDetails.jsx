@@ -26,7 +26,7 @@ const VideoDetails = ({
       </View>
       {/* Channel Card */}
       <View className="my-3 mt-4 flex flex-row items-center justify-between">
-        <View className="flex flex-row gap-2 items-center">
+        <View className="flex flex-row space-x-2 items-center">
           <Image
             source={{ uri: authorThumbnails }}
             className="w-10 aspect-square rounded-full"

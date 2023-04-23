@@ -21,13 +21,15 @@ const VideoCard = ({
   return (
     <View className="w-full my-4">
       {/* Thumbnail */}
-      <View className="rounded-3xl  overflow-hidden">
+      <View className="rounded-3xl overflow-hidden">
         <TouchableOpacity onPress={()=>navigation.navigate("VideoScreen",{videoId})}>
           <Image
             
             source={{ uri: thumbnail }}
-            className="w-full aspect-video object-cover relative"
+            className="object-cover relative"
+            style={{width: "100%", height: 210}}
           />
+          
         </TouchableOpacity>
       </View>
       {/* Video Details */}
