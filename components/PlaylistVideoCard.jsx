@@ -1,6 +1,8 @@
 import { View, Text } from "react-native";
 import React from "react";
+import { useNavigation } from "@react-navigation/native";
 import { Image } from "react-native";
+import { TouchableOpacity } from "react-native";
 
 const PlaylistVideoCard = ({
   title,
@@ -12,8 +14,9 @@ const PlaylistVideoCard = ({
   index,
   lengthSeconds,
 }) => {
+  const navigation = useNavigation();
   return (
-    <View className="w-full flex flex-row gap-5 my-3 max-w-full">
+    <TouchableOpacity className="w-full flex flex-row gap-5 my-3 max-w-full" onPress={()=>navigation.navigate("VideoScreen",{videoId})}>
       <View>
         <Image
           source={{ uri: thumbnail }}
@@ -25,7 +28,7 @@ const PlaylistVideoCard = ({
         <Text className="text-white">{title}</Text>
         <Text className="text-white/80">{author}</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

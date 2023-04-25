@@ -12,6 +12,7 @@ const VideoList = ({ data }) => {
         if (item.type == "channel") {
           return (
             <ChannelCard
+            key={index}
               title={item.author}
               author={item.author}
               authorId={item.authorId}
@@ -47,6 +48,7 @@ const VideoList = ({ data }) => {
         if (item.type == "playlist") {
           return (
             <PlaylistCard
+            key={index}
               title={item.title}
               channelTitle={item.author}
               channelId={item.authorId}

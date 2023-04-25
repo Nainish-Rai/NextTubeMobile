@@ -18,7 +18,7 @@ const PlaylistCard = ({
   videoCount,
   channelThumbnail,
 }) => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <View className="w-full my-4">
       {/* Thumbnail */}
@@ -35,9 +35,9 @@ const PlaylistCard = ({
             className="object-cover relative"
             style={{ width: "100%", height: 220 }}
           />
-          <Text className="absolute bg-bg-primary/40 border-l border-gray-200/50 backdrop-blur-[2px] bottom-0 flex justify-center items-center font-semibold right-0 w-28 h-full z-10">
-            {videoCount}
-          </Text>
+          <View className="absolute bg-black/60 border-l border-gray-200/50 backdrop-blur-[2px] bottom-0 text-center flex justify-center flex-row items-center font-semibold right-0 w-28 h-full z-10">
+            <Text className=" text-white">{videoCount}</Text>
+          </View>
         </TouchableOpacity>
       </View>
       {/* Video Details */}

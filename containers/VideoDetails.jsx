@@ -19,7 +19,7 @@ const VideoDetails = ({
   return (
     <View className="p-4 pt-10 bg-gray-400/10 rounded-b-3xl">
       <View>
-        <Text className="text-white font-medium text-xl my-1 ">{title}</Text>
+        <Text className="text-white font-medium text-lg my-1 ">{title}</Text>
         <Text className="text-gray-200 font-medium mb-1 ">
           Uploaded {publishedText}
         </Text>
