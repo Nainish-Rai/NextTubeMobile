@@ -21,13 +21,13 @@ const VideoCard = ({
   return (
     <View className="w-full my-4">
       {/* Thumbnail */}
-      <View className="rounded-3xl overflow-hidden">
+      <View className="overflow-hidden">
         <TouchableOpacity onPress={()=>navigation.navigate("VideoScreen",{videoId})}>
           <Image
             
             source={{ uri: thumbnail }}
-            className="object-cover relative"
-            style={{width: "100%", height: 210}}
+            className="object-contain relative"
+            style={{width: "100%", height: 240}}
           />
           
         </TouchableOpacity>
@@ -37,8 +37,8 @@ const VideoCard = ({
         {/* <View>
         <Image source={{uri : channelThumbnail}} className="w-24 h-24 object-cover rounded-full" />
         </View> */}
-        <View className="mt-2 mx-1">
-          <Text className="text-white font-medium text-base">{title}</Text>
+        <View className="mt-2  px-3">
+          <Text className="text-white text-base">{title}</Text>
           <View className="flex flex-row pt-1 gap-3">
             <Text className="text-gray-100 " onPress={()=>navigation.navigate("ChannelScreen",{channelId})}>{channelTitle}</Text>
             <Text className="text-gray-100">

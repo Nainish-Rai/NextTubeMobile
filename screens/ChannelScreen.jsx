@@ -39,7 +39,7 @@ const ChannelScreen = ({ route, navigation }) => {
           />
         </View>
         <View className="flex p-3 ml-4">
-          <Text className="text-white font-thin text-3xl">
+          <Text className="text-white text-3xl">
             {data.author}
           </Text>
           <Text className="text-gray-300 font-medium text-xl">
@@ -51,7 +51,7 @@ const ChannelScreen = ({ route, navigation }) => {
         </View>
       </View>
       {/* Latest Videos */}
-      <View className="mt-4">
+      <View className="mt-8">
                 <Text className="text-white text-3xl ml-6">Latest Videos</Text>
       <VideoList data={videoData && videoData} />
       </View>

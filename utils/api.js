@@ -1,8 +1,8 @@
 import axios from "axios";
 // const BASE_URL = "https://invidious.sethforprivacy.com/api/v1/"
-// const BASE_URL = "https://invidious.baczek.me/api/v1/"
+const BASE_URL = "https://invidious.baczek.me/api/v1/"
 // const BASE_URL = "https://vid.priv.au/api/v1/"
-const BASE_URL = "https://iv.ggtyler.dev/api/v1/"
+// const BASE_URL = "https://iv.ggtyler.dev/api/v1/"
 const options = {
   method:'GET',
   params:{

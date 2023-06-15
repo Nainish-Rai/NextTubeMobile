@@ -33,8 +33,8 @@ const VideoScreen = ({ route, navigatiom }) => {
               data.formatStreams &&
               data.formatStreams[data.formatStreams.length - 1].url,
           }}
-          useNativeControls={true}
-          // resizeMode={ResizeMode.COVER}
+          useNativeControls
+          resizeMode={ResizeMode.CONTAIN}
           isLooping
           shouldPlay={true}
           onPlaybackStatusUpdate={(status) => setStatus(() => status)}

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
 import Home from './screens/Home';
 import Constants from 'expo-constants';
 import { NavigationContainer } from "@react-navigation/native";
@@ -8,6 +8,7 @@ import VideoScreen from './screens/VideoScreen';
 import SearchScreen from './screens/SearchScreen';
 import PlaylistScreen from './screens/PlaylistScreen';
 import ChannelScreen from './screens/ChannelScreen';
+
 
 export default function App() {
   const Stack = createStackNavigator();

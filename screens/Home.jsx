@@ -21,7 +21,7 @@ const Home = () => {
       style={{ marginTop: Constants.statusBarHeight }}
     >
       <NavBar />
-      <ScrollView className="flex px-3">
+      <ScrollView className="flex ">
         {data.map((item, index) => {
           return (
             item.lengthSeconds > 60 && (

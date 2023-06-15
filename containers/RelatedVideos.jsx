@@ -4,7 +4,7 @@ import VideoCard from '../components/VideoCard'
 
 const RelatedVideos = ({data}) => {
   return ( data?
-    <View className="bg-slate-100 dark:bg-black px-3 pb-64">
+    <View className="bg-slate-100 dark:bg-black  pb-64">
       {data && data.map((item,index) => {
           return (
             <VideoCard
@@ -21,7 +21,7 @@ const RelatedVideos = ({data}) => {
             />
           );
         })}
-    </View>:<View className="h-screen bg-black"><Text className=" text-6xl text-white">Loading..........</Text>
+    </View>:<View className="h-screen animate-pulse bg-black"><Text className=" text-white">Loading..........</Text>
       </View>
   )
 }
